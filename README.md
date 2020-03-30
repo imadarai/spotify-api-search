@@ -5,7 +5,10 @@ Project was built using Spotify API to search for artists and albums on their pl
 
 ## Tech Stack
  * Javascript
+ * JQuery
+ * AJAX
  * HTML5
+ * Handlebars
  * CSS3
 
 ![Project Image](https://github.com/imadarai/spotify-api-search/blob/master/Spotify%20Search.gif?raw=true)
