@@ -1,0 +1,161 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+#left-panel {
+    background-color: #272121;
+    border-right: 1px solid #ff0000;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: sticky;
+    top: 0;
+}
+img {
+    width: 200px;
+    height: auto;
+}
+h3 {
+
+    color: whitesmoke;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.search-console {
+    padding: 20px;
+}
+
+#right-panel {
+    background-color: #443737;
+
+}
+
+input {
+    border: 1px solid #ff4d00;
+	border-radius: 0;
+	display: inline-block;
+	margin: 12px auto;
+	padding: 10px;
+	width: 100%;
+    color: #ff4d00;
+    background-color: #272121;
+    outline: none;
+}
+
+select {
+    border: 1px solid #ff4d00;
+	border-radius: 0;
+	@include appearance(none); // Compass helper
+	cursor: pointer;
+	display: inline-block;
+	margin: 12px auto;
+	padding: 10px;
+	width: 100%;
+    color: #ff4d00;
+    background-color: #272121;
+    outline: none;
+}
+option {
+    outline: none;
+}
+
+option:hover {
+    background-color: pink;
+    outline: none;
+}
+
+
+#submit-button {
+    background-color: #272121;
+    border-radius: 20px;
+    border: .5px solid #ff4d00;
+    color: #ff4d00;
+    padding: 10px 34px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    width: 150px;
+    margin-top: 10px;
+    outline: none;
+}
+
+#submit-button:hover {
+    border: .5px solid white;
+    color: white;
+}
+
+#results-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#results-for{
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: none;
+    font-family: monospace;
+}
+
+#results-end{
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: none;
+    font-family: monospace;
+}
+
+#spotify-display {
+    margin: 30px;
+    width: 200px;
+}
+
+#spotify-display img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* border: 3px solid white; */
+    box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 0, 0, 0.19);
+
+}
+
+#spotify-display h3 {
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-size:18px;
+}
+
+#more {
+    position: relative;
+    left: 45%;
+    display: none;
+    background-color: #443737;
+    border-radius: 20px;
+    border: .5px solid #ff4d00;
+    color: #ff4d00;
+    padding: 10px 34px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    width: 150px;
+    margin-bottom: 20px;
+}
+#more:hover {
+    border: .5px solid white;
+    color: white;
+}

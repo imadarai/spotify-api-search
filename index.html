@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Spotify Search</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- //RIGHT PANNEL THAT STICKS AND SHOWS SEARCH ALL THE TIME -->
+        <section id="left-panel">
+            <img id="logo" src="logo.png" alt="">
+            <div class="search-console">
+            <h3>I</br> AM</br> LOOKING</br> FOR </br> AN:</br> </h3>
+            <select>
+                <option id="artist">artist</option>
+                <option id="album">album</option>
+            </select>
+            <h3>WITH</br> SEARCH</br> TERM:</br> </h3>
+            <input type="text" name="user-input" value="" placeholder="Search Term" required autofocus>
+            <button id="submit-button">GO !</button>
+            </div>
+
+        </section>
+        <!-- RESULTS CONTAINER -->
+        <section id="right-panel">
+            <h2 id="results-for"></h2>
+            <h2 id="results-for"></h2>
+            <!-- RESULTS GO HERE IN RESULTS CONTAINER -->
+            <div id="results-container"></div>
+            <button id="more">More ...</button>
+            <h2 id="results-end"></h2>
+        </section>
+
+
+        <!-- HANDLEBAR SCRIPT -->
+        <script id="spotifyId" type="text/x-handlebars-template">
+            {{#handlebarData}}
+            <div id='spotify-display'>
+                <a href ={{external_urls.spotify}} target="_blank">
+                    {{#if images.0.url}}
+                    <img src={{images.0.url}}>
+                    {{else}}
+                    <img src='default.png'>
+                    {{/if}}
+
+                </a>
+                <h3>{{name}}</h3>
+            </div>
+            {{/handlebarData}}
+        </script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="script.js" charset="utf-8"></script>
+    </body>
+
+</html>
